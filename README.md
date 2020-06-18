@@ -2,7 +2,7 @@
 
 Uses [git-ftp](https://github.com/git-ftp/git-ftp) and [GitHub actions](https://github.com/features/actions) to deploy a GitHub repository to an SFTP server.
 
-**⚠️ Attention:** This action works only with `actions/checkout@v1` for now. Make sure you use `v1` and not `v2` or `master`.
+**⚠️ Attention:** This is still in testing and not for production use.
 
 ## Example usage
 
@@ -16,10 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: git-ftp push
-      uses: hrsetyono/git-sftp-action@releases/v3
+      uses: hrsetyono/git-sftp-action@v4
       with:
-        url: "sftp://example.com/path/"
+        url: "sftp://example.com/path/to/website"
         user: ${{ secrets.FTP_USER }}
+        key: ${{ secrets.PRIVATE_KEY }}
 ```
 
 ## Input parameters
@@ -28,6 +29,7 @@ Input parameter | Description | Required | Default
 --- | --- | --- | ---
 url | git-ftp url (see [documentation](https://github.com/git-ftp/git-ftp/blob/1.6.0/man/git-ftp.1.md#url)) | Yes | N/A
 user | FTP username | Yes | N/A
-password | FTP password | Yes | N/A
+password | FTP password | No | N/A
+key | Private key, the public key must be set to `authorized_keys` in your host | No | N/A
 syncroot | Specifies a local directory to sync from as if it were the git project root path. | No | `.`
 options | Additional options (see [documentation](https://github.com/git-ftp/git-ftp/blob/1.6.0/man/git-ftp.1.md#options)) | No | `--auto-init`
