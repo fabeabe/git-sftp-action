@@ -1,4 +1,4 @@
-name: 'git-sftp-action'
+name: 'git-sftp-action-with-password'
 author: 'Henner Setyono <henner@setyono.net>'
 description: 'Uses git-ftp and GitHub actions to deploy a GitHub repository to an SFTP server.'
 inputs:
