@@ -1,4 +1,6 @@
-# git-sftp-action
+forked from hrsetyono/git-sftp-action
+
+# git-sftp-action-with-password
 
 Uses [git-ftp](https://github.com/git-ftp/git-ftp) and [GitHub actions](https://github.com/features/actions) to deploy a GitHub repository to an SFTP server.
 
