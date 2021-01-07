@@ -8,6 +8,9 @@ inputs:
   user:
     description: 'FTP login name'
     required: true
+  password:
+    description: 'FTP password'
+    required: false
   syncroot:
     description: 'Specifies a local directory to sync from as if it were the git project root path.'
     required: false
