@@ -11,6 +11,9 @@ inputs:
   password:
     description: 'FTP password'
     required: false
+  remote_root:
+    description: 'Remote Root Directory'
+    required: false
   syncroot:
     description: 'Specifies a local directory to sync from as if it were the git project root path.'
     required: false
