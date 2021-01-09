@@ -4,6 +4,6 @@ git-ftp push \
   --syncroot $INPUT_SYNCROOT \
   --user $INPUT_USER \
   --passwd $INPUT_PASSWORD \
-  --remote-root $INPUT_REMOTE_ROOT
+  --remote-root $INPUT_REMOTE_ROOT \
   $INPUT_OPTIONS \
   $INPUT_URL
