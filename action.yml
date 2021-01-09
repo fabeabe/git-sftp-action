@@ -11,7 +11,7 @@ inputs:
   password:
     description: 'FTP password'
     required: false
-  remote_root:
+  remoteroot:
     description: 'Remote Root Directory'
     required: false
   syncroot:
