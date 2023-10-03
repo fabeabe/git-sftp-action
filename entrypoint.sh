@@ -5,7 +5,6 @@ git config git-ftp.user $INPUT_USER
 git config git-ftp.password $INPUT_PASSWORD
 
 git ftp init
-  --remote-root $INPUT_REMOTEROOT
 
 git-ftp push \
   --syncroot $INPUT_SYNCROOT \
