@@ -1,9 +1,12 @@
 #!/bin/sh -l
-git ftp init # upload all once
-  --user $INPUT_USER \
-  --passwd $INPUT_PASSWORD \
-  --remote-root $INPUT_REMOTEROOT \
-  $INPUT_URL
+
+git config git-ftp.url $INPUT_URL
+git config git-ftp.user $INPUT_USER
+git config git-ftp.password $INPUT_PASSWORD
+
+git ftp init
+  --remote-root $INPUT_REMOTEROOT
+
 git-ftp push \
   --syncroot $INPUT_SYNCROOT \
   --user $INPUT_USER \
