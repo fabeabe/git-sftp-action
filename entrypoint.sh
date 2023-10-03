@@ -1,5 +1,5 @@
 #!/bin/sh -l
-
+git ftp init # upload all once
 git-ftp push \
   --syncroot $INPUT_SYNCROOT \
   --user $INPUT_USER \
